@@ -8,3 +8,5 @@ By default these computers had not an operating system in quite the sense that m
 ## PROGRAMMING BEYOND BASIC
 
 For advanced users who wished to code closer to the bare metal and achieve much faster execution times than the best efforts in BASIC could possibly achieve for some types of program, there was the option of raw machine language coding - pure binary **op-codes** and memory addresses - which could be entered and executed at the BASIC prompt, or else there was an intermediate option, the purchase of an assembly language software package which could be loaded from media such as cassette tape, floppy disk or cartridge. Assembly language for a particular microprocessor correlates very closely to the machine language; it is just a slightly more human readable expression of the op-codes (the actual electronic instructions that pass through the circuitry of the processor). Many assembler software packages bundled the assembler itself with an early form of an integrated development environment (IDE) - almost the VS Code of the early 1980s.
+
+## MEMORY MONITOR
