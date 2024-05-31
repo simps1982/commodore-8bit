@@ -1,6 +1,6 @@
 # INTRODUCING COMMODORE 8-BIT COMPUTERS
 
-This series of computers began with the famous Commodore **PET** (1977) and continued with the **VIC-20** (1980/81), **Commodore 64** (1982), and derivative models such as the **Plus 4**, **C-16**, and the final 8-bit models, the **C-128** and **C-128D** (both 1985).
+This series of computers began with the famous Commodore **PET** (1977) and continued with the **VIC-20** (1980/81), the all-time record-smashing **Commodore 64** (1982), and derivative models such as the **Plus 4**, **C-16**, and the final 8-bit models, the **C-128** and **C-128D** (both 1985).
 
 By default these computers had not an operating system in quite the sense that many of today's younger users would understand, but a minimalist **kernel** (accidentally spelled `**Kernal**` by Commodore), approximately equivalent to the BIOS in an IBM-compatible PC, and the BASIC programming language interpreter. These both lived in a ROM chip for near-instant initial loading, and the user entered BASIC commands to carry out almost all day-to-day tasks as well as to optionally author their own programs.
 
