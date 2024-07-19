@@ -18,6 +18,12 @@ A relatively easy way to learn the fundamentals of this "loader" technique long 
 70 DATA 646,1
 80 DATA 0,0
 ```
+
+```jsx
+LIST
+RUN
+```
+
 ### Explanation
 This code snippet is comprised primarly of address-value pairs, saying "please inject this value into this memory address." 
  - Border (address 53280) is set to blue (6)
