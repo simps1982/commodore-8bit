@@ -18,7 +18,7 @@ Probably the most common way for new users to begin to build familiarity with PO
  - background colour;
  - text color.
 
-These properties are usually set to an integer value in the range 0-16.
+These properties are usually set to an integer value in the range 0-15.
 
 Each is stored at a memory address as follows:
  - border colour: 53280
