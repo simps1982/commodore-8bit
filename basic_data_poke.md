@@ -1,6 +1,6 @@
 # Using BASIC to combine POKE statements with DATA statements
 
-In many variants of **BASIC**, including Commodore's, the **DATA** keyword can be a useful alternative to arrays for feeding batches of data into a program en masse to populate one or many variables.
+In many variants of **BASIC**, including Commodore's, the **DATA** keyword can be a useful alternative to arrays for feeding batches of data into a program *en masse* to populate one or many variables.
 The BASIC command **READ** reads one line of data at a time into the specified BASIC variables.
 
 On 8-bit Commodore microcomputers, especially in the early years, one popular way to enter raw machine code programs was to assign every byte of the program and its associated data to a series of DATA statements in BASIC, and then write a simple **loader** consisting usually of a few lines of BASIC, often with a simple loop structure, to read the DATA, store it at an appropriate addresss space where it will not conflict with the operating system kernel (or "kernal" in Commodore's unconventional spelling) or with the BASIC interpreter, and then execute it using the **SYS** statement specifying the start address.
