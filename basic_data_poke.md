@@ -8,7 +8,7 @@ On 8-bit Commodore microcomputers, especially in the early years, one popular wa
 A relatively easy way to learn the fundamentals of this "loader" technique long before one has learned machine language, binary notation or the like, is to use a combination of **POKE** and **DATA** in a short BASIC program to efficiently set several user interface parameters, such as display colours.
 
 ## First example: set blue border, black background and white text
-```jsx
+``` BASIC
 10 READ A, V
 20 IF A + V = 0 THEN END
 30 POKE A, V
@@ -19,7 +19,7 @@ A relatively easy way to learn the fundamentals of this "loader" technique long 
 80 DATA 0,0
 ```
 
-```jsx
+``` BASIC
 LIST
 RUN
 ```
