@@ -19,10 +19,25 @@ A relatively easy way to learn the fundamentals of this "loader" technique long 
 80 DATA 0,0
 ```
 
+### Double-check your code, fix if necessary
 ``` BASIC
 LIST
+```
+
+Will print to screen all the BASIC code currently in memory. If you see a mistake on a line, simply replace it with a corrected version by typing a new line beginning with the same line number as the problematic line e.g 50. Next time you enter `LIST` you will see the amended version has replaced the old in memory.
+
+If you realise you forgot to enter a particular line, or need to insert any new line amongst the others, just pick an intermediate line number e.g. 35 if you need to insert a line in between lines 30 and 40.
+
+BASIC line numbers are arbitrary, and it is possible to avoid them altogether, but it is customary to use the ten times table for this reason: it leaves you scope to insert additional lines at any point later and facilitates easy correction of mistakes.
+
+It is a general custom to list `DATA` statements at the end of a program unless you have a specific reason not to. In this example snippet the placement will make no noticeable difference, but in a much longer program with heavy use of `GOTO` or `GOSUB` and `RETURN`, there could be a very significant performance overhead to placing `DATA` statements elsewhere.
+
+### Test run your code
+``` BASIC
 RUN
 ```
+
+If the execution produces an error message, `LIST` your code again, try a change, and repeat until it works as intended.
 
 ### Explanation
 This code snippet is comprised primarly of address-value pairs, saying "please inject this value into this memory address." 
@@ -30,6 +45,6 @@ This code snippet is comprised primarly of address-value pairs, saying "please i
  - Background (address 53281) is  set to black (0)
  - Text (address 646) is set to white (1)
 
-When A and V, as read from a **DATA** line, both equal 0 (tested on line 20) the program exits with the **END** command, thereby breaking out of the potentially infinite loop setup by the **GOTO** instruction. The program will READ-then-POKE in a loop until double-zero DATA is encountered.
+When A and V, as read from a `DATA` line, both equal 0 (tested on line 20) the program exits with the `END` command, thereby breaking out of the potentially infinite loop setup by the `GOTO` instruction. The program will READ-then-POKE in a loop until double-zero data line is encountered.
 
-This can be useful in situations where one wishes to keep changing the amount of data without undue constraint. The values chosen to represent the end of the dataset are arbitrary: while (0, 0) was chosen for this simple example and worked well, this would obviously not be an acceptable choice in a project handling statistical data in which some of the real entries could conceivably equal 0, e.g. *points scored* or *number of endangered birds spotted on the lake today*.
+This sort of **loop-until-end-of-data-detected** mechanism can be useful in situations where one wishes to keep changing the amount of data without undue constraint. The values chosen to represent the end of the dataset are arbitrary: while (0, 0) was chosen for this simple example and worked well, this would obviously not be an acceptable choice in a project handling statistical data in which some of the real entries could conceivably equal 0, e.g. *points scored* or *number of endangered birds spotted on the lake today*.
