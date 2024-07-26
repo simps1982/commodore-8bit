@@ -9,14 +9,15 @@ A relatively easy way to learn the fundamentals of this **"loader"** technique l
 
 ## First example: set blue border, black background and white text
 ``` BASIC
-10 READ A, V
-20 IF A + V = 0 THEN END
-30 POKE A, V
-40 GOTO 10
-50 DATA 53280,6
-60 DATA 53281,0
-70 DATA 646,1
-80 DATA 0,0
+10 PRINT CHR$(147)
+20 READ A, V
+30 IF A = 0 THEN END
+40 POKE A, V
+50 GOTO 20
+100 DATA 53280,6
+110 DATA 53281,0
+120 DATA 646,1
+130 DATA 0,99
 ```
 
 ### Double-check your code, fix if necessary
@@ -49,6 +50,12 @@ This code snippet is comprised primarly of address-value pairs, saying "please i
  - Background (address 53281) is  set to black (0)
  - Text (address 646) is set to white (1)
 
-When A and V, as read from a `DATA` line, both equal 0 (tested on line 20) the program exits with the `END` command, thereby breaking out of the potentially infinite loop setup by the `GOTO` instruction. The program will `READ`-then-`POKE` in a loop until double-zero data line is encountered.
+When A, as read from a `DATA` line, equals 0 (tested on line 30) the program exits with the `END` command, thereby breaking out of the potentially infinite loop setup by the `GOTO` instruction. The program will `READ`-then-`POKE` in a loop until double-zero data line is encountered.
 
-This sort of **loop-until-end-of-data-detected** mechanism can be useful in situations where one wishes to keep changing the amount of data without undue constraint. The values chosen to represent the end of the dataset are arbitrary: while (0, 0) was chosen for this simple example and worked well, this would obviously not be an acceptable choice in a project handling statistical data in which some of the real entries could conceivably equal 0, e.g. *points scored* or *number of endangered birds spotted on the lake today*.
+The first line (10), which prints to screen character 147, a special **control character,** is early versions of Commodore BASIC's way of **clearing the screen** in the absence of a dedicated clear screen command such as `CLS` found in many other BASIC dialects. `CHR$()` is a builtin function which takes an integer argument and returns a character.
+
+This sort of **loop-until-end-of-data-detected** mechanism can be useful in situations where one wishes to keep changing the amount of data without undue constraint. The values chosen to represent the end of the dataset are arbitrary: while (0, 99) was chosen for this simple example and worked well, this would obviously not be an acceptable choice in a project handling statistical data in which some of the real entries could conceivably equal 0 or 99, e.g. *points scored* or *number of endangered birds spotted on the lake today*.
+
+(0, 99) made sense as the end-of-data marker in this snippet, as we are reading (memory address, colour value) pairs, and 0 does not make sense as an address we would wish to write a colour to, and 99 is well outside the range (0-15) of Commodore colours for this situation.
+
+In this short example program all `DATA` statements contained only pairs of integers, but some programs will use `READ` and `DATA` to read BASIC's other data types into variables of the matching types e.g. V$ could be the variable name for storing **string** values.
