@@ -1,9 +1,11 @@
 # Introducing PEEK and POKE
 Few will ever have spent much time using an 8-bit Commodore, such as the C-64, without having encountered the `PEEK` and `POKE` commands. I say commands, though technically `POKE` is an operating system command while `PEEK` is a **function** designed to return an integer when called.
 
-PEEK and POKE respectively reveal the value stored at a specified memory address, and inject a value into a specified memory address. In other words, they are extremely powerful, giving the user direct unfettered access to the real workings of their 8-bit microcomputer. Accordingly, while many problems may be solved, and solutions achieved, most efficiently through correct use of PEEK and POKE, using so powerful a command as POKE does have the potential to compeletely freeze the computer, requiring a hard reboot, or to overwrite one's current program, erasing it from memory.
+`PEEK` and `POKE` respectively reveal the value stored at a specified memory address, and inject a value into a specified memory address. In other words, they are extremely powerful, giving the user direct unfettered access to the real workings of their 8-bit microcomputer. Accordingly, while many problems may be solved, and solutions achieved, most efficiently through correct use of PEEK and POKE, using so powerful a command as POKE does have the potential to compeletely freeze the computer, requiring a hard reboot, or to overwrite one's current program, erasing it from memory.
 
-Although a whole sub-culture built on **PEEK-and-POKE-centered-programming** is perhaps most strongly associated with the C-64, countless variants of BASIC for a range of hardware platforms also use these two reserved keywords.
+Although a whole sub-culture, complete with tee-shirts and mugs, built on **PEEK-and-POKE-centered-programming** is perhaps most strongly associated with the C-64, countless variants of BASIC running on a range of hardware platforms also use these two reserved keywords.
+
+`POKE` was commonly used to gain an advantage in C-64 games, by hacking a copy of the code to provide unlimited retries or access to the final level or the full range of advanced weapons, for example, once the memory addresses of these variables had been painstakingly discovered.
 
 ## Syntax of PEEK and POKE
 PEEK and POKE commands take the following form:
