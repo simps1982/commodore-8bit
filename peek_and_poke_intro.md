@@ -16,6 +16,17 @@ where ADDRESS and (where applicable) VALUE are both integers (whole numbers).
 
 The parentheses (rounded brackets) are vital when using `PEEK`, as it is a function designed to return a single-byte integer value.
 
+Perhaps the most common use of the `PEEK()` function among new users will be in conjunction with a `PRINT` statement, to display on screen a value captured from a specified memory location.
+Another likely use case is to store the value returned by `PEEK(ADDRESS)` in a BASIC variable for use later in the program.
+
+### A beginner's example to use PEEK() to capture the number of columns available to the display
+```BASIC
+C = PEEK(781)
+PRINT "THIS DISPLAY HAS" C "COLUMNS."
+```
+
+On an unmodified C-64 the expected result would be 40 columns.
+
 ## Learning the POKE command
 Probably the most common way for new users to begin to build familiarity with POKE on their Commodore is to simply change the colour of three fundamental elements of their display:
 1. border colour;
