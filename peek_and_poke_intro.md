@@ -5,7 +5,9 @@ Few will ever have spent much time using an 8-bit Commodore, such as the C-64, w
 
 Although a whole sub-culture, complete with tee-shirts and mugs, built on **PEEK-and-POKE-centered-programming** is perhaps most strongly associated with the C-64, countless variants of BASIC running on a range of hardware platforms also use these two reserved keywords.
 
-`POKE` was commonly used to gain an advantage in C-64 games, by hacking a copy of the code to provide unlimited retries or access to the final level or the full range of advanced weapons, for example, once the memory addresses of these variables had been painstakingly discovered.
+`POKE` was commonly used to gain an advantage in C-64 games, usually by using a special accessory cartridge to freeze a game in play and hacking a copy of the code in RAM to provide unlimited retries or access to the final level or the full range of advanced weapons, for example, once the memory addresses of these variables had been discovered, whether by painstaking trial-and-error or by looking them up in magazines.
+
+For a time, some gaming sub-culture vernaculars used 'Pokes' and 'Cheat codes' interchangeably. Some magazines published tables full of 'Pokes' (meaning cheat code mumbers).
 
 ## Syntax of PEEK and POKE
 PEEK and POKE commands take the following form:
