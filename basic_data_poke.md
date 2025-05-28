@@ -3,7 +3,7 @@
 In many variants of **BASIC**, including Commodore's, the 'DATA' keyword can be a useful alternative to arrays for feeding batches of data into a program *en masse* to populate one or many variables.
 The BASIC command `READ` reads one line of data at a time into the specified BASIC variables.
 
-On 8-bit Commodore microcomputers, especially in the early years, prior to the wide availability of assembler software packages, one popular way to enter raw machine code programs was to assign every byte of the program and its associated data to a series of `DATA` statements in BASIC, and then write a simple **loader** consisting usually of a few lines of BASIC, often with a simple loop structure, to read the data, store it at an appropriate addresss space where it will not conflict with the operating system kernel (or "kernal" in Commodore's unconventional spelling) or with the BASIC interpreter, and then execute it using the `SYS` statement specifying the start address.
+On 8-bit Commodore microcomputers, especially in the early years, prior to the wide availability of assembler software packages, one popular way to enter **raw machine code** programs was to assign every byte of the program and its associated data to a series of `DATA` statements in BASIC, and then write a simple **loader** consisting usually of a few lines of BASIC, often with a simple loop structure, to read the data, store it at an appropriate addresss space where it will not conflict with the operating system kernel (or "Kernal" in Commodore's unconventional spelling) or with the BASIC interpreter, and then execute it using the `SYS` statement specifying the program's start address.
 
 A relatively easy way to learn the fundamentals of this **"loader"** technique long before one has learned machine language, binary notation or the like, is to use a combination of `POKE` and `DATA` in a short BASIC program to efficiently set several user interface parameters, such as display colours.
 
@@ -11,7 +11,7 @@ A relatively easy way to learn the fundamentals of this **"loader"** technique l
 ``` BASIC
 10 PRINT CHR$(147)
 20 READ A, V
-30 IF A = 0 THEN END
+30 IF A = 0 AND V = 99 THEN END
 40 POKE A, V
 50 GOTO 20
 100 DATA 53280,6
@@ -35,7 +35,7 @@ BASIC line numbers are arbitrary, and it is sometimes possible to avoid them alt
 
 There are various other loose-knit conventions for line numbering: some programmers like to start their 'DATA' statements with a round key number like 100, 1 000 or 10 000 even if the previous line number was only 50 or 60 and then resume counting in tens henceforth.
 
-It is a general custom to list `DATA` statements at the end of a program unless you have a specific reason not to. In this example snippet the placement will make no noticeable difference, but in a much longer program with heavy use of `GOTO` or `GOSUB` and `RETURN`, there could be a significant performance overhead to placing `DATA` statements elsewhere.
+It is a general custom for beginners to list `DATA` statements together at either the start or the end of a program unless you have a specific reason not to. In this example snippet the placement will make no noticeable difference, but in a much longer program with heavy use of `GOTO` or `GOSUB` and `RETURN`, there could be a significant performance overhead to placing `DATA` statements elsewhere.
 
 ### Test run your code
 ``` BASIC
