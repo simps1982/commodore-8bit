@@ -5,7 +5,7 @@ The BASIC command `READ` reads one line of data at a time into the specified BAS
 
 On 8-bit Commodore microcomputers, especially in the early years, prior to the wide availability of assembler software packages, one popular way to enter **raw machine code** programs was to assign every byte of the program and its associated data to a series of `DATA` statements in BASIC, and then write a simple **loader** consisting usually of a few lines of BASIC, often with a simple loop structure, to read the data, store it at an appropriate addresss space where it will not conflict with the operating system kernel (or "Kernal" in Commodore's unconventional spelling) or with the BASIC interpreter, and then execute it using the `SYS` statement specifying the program's start address.
 
-A relatively easy way to learn the fundamentals of this **"loader"** technique long before one has learned machine language, binary notation or the like, is to use a combination of `POKE` and `DATA` in a short BASIC program to efficiently set several user interface parameters, such as display colours.
+A relatively easy way to learn the fundamentals of this **"loader"** technique long before one has learned machine language, binary notation or the like, is to use a combination of `POKE` and `DATA` in a short BASIC program to efficiently set several user interface parameters, such as display colours. In such a small example as this, there is no need for `SYS` statement, as `POKE` will suffice.
 
 ## First example: set blue border, black background and white text
 ``` BASIC
