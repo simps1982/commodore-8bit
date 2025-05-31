@@ -1,4 +1,4 @@
-# Supermon+64: Jim Butterfield's famous Machine Language Monitor program
+# Supermon+64: Jim Butterfield's famous Machine Language Monitor (MLM) program
 
 ## Memory bank areas
 Generally $C000 - $CFFF is an address space range to use for one's own small machine language programs when coding with **Supermon+64.**
