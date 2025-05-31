@@ -3,7 +3,7 @@
 ## From within Assembly Language
 ``JSR [memory address of sub-routine]`` ("Jump to sub-routine") assembly language equivalent to ``GOSUB`` in BASIC.
 
-``RTS`` (Return from sub-routine") assembly language equivalent to ``RETURN`` in BASIC.
+``RTS`` ("Return from sub-routine") assembly language equivalent to ``RETURN`` in BASIC.
 
 ## From within BASIC
 ``SYS [decimal memory address of sub-routine]`` ("System") - e.g. ``SYS 8``.
