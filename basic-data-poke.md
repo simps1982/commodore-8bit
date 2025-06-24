@@ -29,9 +29,9 @@ Will print to screen all the BASIC code currently in memory. If you see a mistak
 
 If you realise you forgot to enter a particular line, or need to **insert a new line** somewhere amongst the others, just pick an intermediate line number e.g. 35 if you need to insert a line in between lines 30 and 40.
 
-To **erase a line** simply enter the line number and hit ENTER. The next execution of the `LIST` command will show that the unwanted line has disappeared from memory.
+To **erase a line** completely simply enter the line number and hit ENTER. The next execution of the `LIST` command will show that the unwanted line has disappeared from memory.
 
-BASIC line numbers are arbitrary, and it is sometimes possible to avoid them altogether, but it is customary to use the ten times table for this reason: it leaves you scope to insert additional lines at any point later and facilitates easy correction of mistakes.
+BASIC line numbers are arbitrary, but it is customary to use the ten times table for this reason: it leaves you scope to swiftly insert additional lines at any point later and facilitates easy correction of mistakes.
 
 There are various other loose-knit conventions for line numbering: some programmers like to start their 'DATA' statements with a round key number like 100, 1 000 or 10 000 even if the previous line number was only 50 or 60 and then resume counting in tens henceforth.
 
