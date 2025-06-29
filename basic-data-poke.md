@@ -55,12 +55,12 @@ This code snippet is comprised primarly of address-value pairs, saying "please i
  - Background (address 53281) is  set to black (0)
  - Text (address 646) is set to white (1)
 
-When A, as read from a `DATA` line, equals 0 (tested on line 30) the program exits with the `END` command, thereby breaking out of the potentially infinite loop setup by the `GOTO` instruction. The program will `READ`-then-`POKE` in a loop until it encounters a data line comprised of **an end-of-data-signifier.**
+When A, as read from a `DATA` line, equals 0 (tested on line 30) the program exits with the `END` command, thereby breaking out of the potentially infinite loop setup by the `GOTO` instruction. The program will `READ`-then-`POKE` in a loop until it encounters a data line comprised of **an end-of-data signifier.**
 
 The first line (10), which prints to screen character 147, a special **control character,** is early versions of Commodore BASIC's way of **clearing the screen** in the absence of a dedicated clear screen command such as `CLS` found in many other BASIC dialects. `CHR$()` is a builtin function which takes an integer argument and returns a character.
 
 This sort of **loop-until-end-of-data-detected** mechanism can be useful in situations where one wishes to keep changing the amount of data without undue constraint. The values chosen to represent the end of the dataset are arbitrary: while (0, 99) was chosen for this simple example and worked well, this would obviously not be an acceptable choice in a project handling statistical data in which some of the real entries could conceivably equal 0 or 99, e.g. *points scored* or *number of ducks spotted on the lake today*.
 
-(0, 99) made sense as the end-of-data marker in this snippet, as we are reading (memory address, colour value) pairs, and 0 does not make sense as an address we would wish to write a colour to, and 99 is easy to remember and well outside the range (0-15) of Commodore colours for this situation.
+(0, 99) made sense as the end-of-data marker in this snippet, as we are reading (memory address, colour value) pairs, and 0 does not make sense as a memory address we might wish to write a colour to, while 99 is easy to remember and well outside the numeric range (0-15) of Commodore colours.
 
 In this short example program all `DATA` statements contained only pairs of integers, but some programs will use `READ` and `DATA` to read BASIC's other data types into variables of the matching types e.g. V$ could be the variable name for storing **string** values.
