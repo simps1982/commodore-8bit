@@ -55,7 +55,7 @@ This code snippet is comprised primarly of address-value pairs, saying "please i
  - Background (address 53281) is  set to black (0)
  - Text (address 646) is set to white (1)
 
-When A, as read from a `DATA` line, equals 0 (tested on line 30) the program exits with the `END` command, thereby breaking out of the potentially infinite loop setup by the `GOTO` instruction. The program will `READ`-then-`POKE` in a loop until double-zero data line is encountered.
+When A, as read from a `DATA` line, equals 0 (tested on line 30) the program exits with the `END` command, thereby breaking out of the potentially infinite loop setup by the `GOTO` instruction. The program will `READ`-then-`POKE` in a loop until it encounters a data line comprised of **an end-of-data-signifier.**
 
 The first line (10), which prints to screen character 147, a special **control character,** is early versions of Commodore BASIC's way of **clearing the screen** in the absence of a dedicated clear screen command such as `CLS` found in many other BASIC dialects. `CHR$()` is a builtin function which takes an integer argument and returns a character.
 
