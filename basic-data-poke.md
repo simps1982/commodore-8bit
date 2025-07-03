@@ -27,9 +27,16 @@ LIST
 
 Will print to screen all the BASIC code currently in memory. If you see a mistake on a line, simply replace it with a corrected version by typing a new line beginning with the same line number as the problematic line e.g 50. Next time you enter `LIST` you will see the amended version has replaced the old in memory.
 
+As soon as you write your first non-trivial program too great in length to fit within the screen, you will rarely want to `LIST` your entire program, but frequently list specific lines or sections therein. Commodore BASIC provides for this development need.
+
 To view a particular line of code, simply enter the `LIST` command and the line number e.g.:
 ``` BASIC
 LIST 50
+```
+
+To view a specific area of your program, simply enter the `LIST` command and a hyphen-separated range of line numbers e.g.:
+``` BASIC
+LIST 170-230
 ```
 
 If you realise you forgot to enter a particular line, or need to **insert a new line** somewhere amongst the others, just pick an intermediate line number e.g. 35 if you need to insert a line in between lines 30 and 40.
@@ -40,7 +47,7 @@ BASIC line numbers are arbitrary, but it is customary to use the ten times table
 
 There are various other loose-knit conventions for line numbering: some programmers like to start their 'DATA' statements with a round key number like 100, 1 000 or 10 000 even if the previous line number was only 50 or 60 and then resume counting in tens henceforth.
 
-It is a general custom for beginners to list `DATA` statements together at either the start or the end of a program unless you have a specific reason not to. In this example snippet the placement will make no noticeable difference, but in a much longer program with heavy use of `GOTO` or `GOSUB` and `RETURN`, there could be a significant performance overhead to placing `DATA` statements elsewhere.
+It is a general custom for beginners to list `DATA` statements together at either the start or the end of a program unless you have a specific reason not to. At the end seems to be most common. In this example snippet the placement will make no noticeable difference to execution speed, but in a much longer program with heavy use of `GOTO` or `GOSUB` and `RETURN`, there could be a significant performance overhead to placing `DATA` statements elsewhere.
 
 ### Test run your code
 ``` BASIC
