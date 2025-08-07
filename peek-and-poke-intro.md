@@ -57,7 +57,7 @@ POKE 646, 1
 The above sequence of POKE commands will give a pale blue border, a black screen background and white text: perhaps an easier-to-read combination than the C64's famous default colour scheme.
 
 ### Using variables with POKE
-The two parameters for a POKE command, **ADDRESS** and **VALUE** can be entered directly as numbers, as in the above example, but there are countless use cases in which it would be greatly advantageous to store them in a variable, and have the POKE command draw upon them from there. For brevity one might choose to call such a pair of variabes **A** and **V** in BASIC.
+The two parameters for a `POKE` command, **ADDRESS** and **VALUE** can be entered directly as numbers, as in the above example, but there are countless use cases in which it would be greatly advantageous to store them in a variable, and have the POKE command draw upon them from there. For brevity one might choose to call such a pair of variabes **A** and **V** in Commodore BASIC. In the 8-bit micro world, it is rare for variable names to be longer than 2 characters, as some platform variants impose this limit for sound reasons of technical limitation.
 
 For example, to set the background colour to black (0):
 ``` BASIC
