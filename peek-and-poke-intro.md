@@ -4,11 +4,11 @@ Few will ever have spent much time using an 8-bit Commodore, such as the C64, wi
 
 `PEEK` **reveals** the value stored at a specified memory address. `POKE` **injects** a value into a specified memory address. In other words, these two keywords are extremely powerful, giving the user direct unfettered access to the real workings of his/her 8-bit microcomputer. Accordingly, while many problems may be solved, and solutions achieved, most efficiently through correct use of `PEEK` and `POKE`, using so powerful a command as POKE does have the potential to cause serious problems such as freezing the computer, requiring a hard reboot, or the overwriting of one's current program, erasing it from memory. With great power comes great responsibility.
 
-Although a whole sub-culture, complete with tee-shirts, hats and mugs, built on **PEEK-and-POKE-centered-programming** is perhaps most strongly associated with the C64, countless variants of BASIC running on a range of hardware platforms also use these two reserved keywords, primarily in the 8-bit era, but even through the 16- and 32-bit eras. It is hard to overstate the important legacy of these two keywords. So many of the computing pioneers who grew up to change the world and acquire enormous fortunes first became hooked on computing by discovering the magic of `PEEK` and `POKE` trickery during childhood.
+Although a whole sub-culture, complete with tee-shirts, hats and mugs, built on **PEEK-and-POKE-centered-programming** is perhaps most strongly associated with the C64, many programming languages besides the vast plurality of BASIC variants across a range of hardware platforms also use these two reserved keywords, primarily through the 8-bit era, but even through the 16- and 32-bit eras. It is hard to overstate the important legacy of these two keywords. So many of the high-tech pioneers who grew up to change the world and acquire enormous fortunes first became hooked on computing and technology by discovering the magic of `PEEK` and `POKE` trickery during childhood.
 
-For a time, some microcomputer gaming sub-culture vernaculars used 'Pokes' and 'Cheat codes' as interchangeable terms. Several 8-bit gaming magazines regularly published tables of 'Pokes,' meaning cheat code mumbers for games.
+For a time, some microcomputer gaming sub-culture vernaculars used 'Pokes' and 'Cheat Codes' as interchangeable terms. Several 8-bit gaming magazines regularly published tables of 'Pokes,' meaning cheat code mumbers for games.
 
-Ocassionally end-users would use a "freezer cartridge" and a `POKE` command to fix a known bug in a published game or software application, especially if only one or two bytes were causing the problem. Users who didn't want to have to repeat the freeze-and-poke process during every runtime would sometimes copy the modified software from RAM to a fresh floppy disk and label it as a "FIXED" copy.
+Ocassionally end-users would use a "freezer cartridge" and a `POKE` command to fix a known bug in a published game or software application, especially if only one or two stray bytes were causing the problem. Users who didn't want to have to repeat the freeze-and-poke process during every runtime would sometimes copy the modified software from RAM to a fresh floppy disk and label it as a "FIXED" copy.
 
 ## Syntax of PEEK and POKE
 PEEK and POKE commands take the following form:
@@ -19,8 +19,10 @@ where ADDRESS and (where applicable) VALUE are both integers (whole numbers). Un
 
 The parentheses (rounded brackets) are vital when using `PEEK`, as it is a function designed to return a single-byte integer value.
 
-Perhaps the most common use of the `PEEK()` function among new users will be in conjunction with a `PRINT` statement, to display on screen a value captured from a specified memory location.
+Perhaps the most common use of the `PEEK()` function among fledgling BASIC programmers will be in conjunction with a `PRINT` statement, to display on screen a value captured from a specified memory location.
 Another likely use case is to store the value returned by `PEEK(ADDRESS)` in a BASIC variable for use later in the program.
+
+`PEEK` is often the only fast and effective way for a BASIC program to read vital values from the C64's internal hardware, such as its legendary sound and video chipset (chips known as SID and VIC), and external peripherals such as joysticks.
 
 ### A beginner's example to use PEEK() to capture the number of columns available to the display
 ```BASIC
