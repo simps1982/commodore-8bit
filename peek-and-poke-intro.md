@@ -6,9 +6,7 @@ Few will ever have spent much time using an 8-bit Commodore, such as the C64, wi
 
 Although a whole sub-culture, complete with tee-shirts, hats and mugs, built on **PEEK-and-POKE-centered-programming** is perhaps most strongly associated with the C64, countless variants of BASIC running on a range of hardware platforms also use these two reserved keywords, primarily in the 8-bit era, but even through the 16- and 32-bit eras. It is hard to overstate the important legacy of these two keywords. So many of the computing pioneers who grew up to change the world and acquire enormous fortunes first became hooked on computing by discovering the magic of `PEEK` and `POKE` trickery during childhood.
 
-`POKE` was commonly used to gain an advantage in C64 games, usually by using a special accessory cartridge to freeze a game in play and hacking a copy of the code in RAM to provide unlimited retries or access to the final level or the full range of advanced weapons, for example, once the memory addresses of these variables had been discovered, whether by painstaking trial-and-error or by looking them up in magazines.
-
-For a time, some gaming sub-culture vernaculars used 'Pokes' and 'Cheat codes' as interchangeable terms. Several 8-bit gaming magazines regularly published tables of 'Pokes' (meaning cheat code mumbers).
+For a time, some microcomputer gaming sub-culture vernaculars used 'Pokes' and 'Cheat codes' as interchangeable terms. Several 8-bit gaming magazines regularly published tables of 'Pokes,' meaning cheat code mumbers for games.
 
 Ocassionally end-users would use a "freezer cartridge" and a `POKE` command to fix a known bug in a published game or software application, especially if only one or two bytes were causing the problem. Users who didn't want to have to repeat the freeze-and-poke process during every runtime would sometimes copy the modified software from RAM to a fresh floppy disk and label it as a "FIXED" copy.
 
